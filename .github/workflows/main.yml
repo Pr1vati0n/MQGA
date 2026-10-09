@@ -150,6 +150,8 @@ jobs:
 
   patch:
     name: Patch QQ | 修补 QQ
+    permissions:
+      contents: write
     needs: check-updates
     if: needs.check-updates.outputs.patch_needed == 'true'
     runs-on: ubuntu-latest
